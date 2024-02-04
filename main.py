@@ -77,7 +77,7 @@ for item in reddit.inbox.stream():
     for mod in subreddit.moderator():
         subject = f"📠Mod Fax📠 from /u/{item.author} to Mods of /r/{subreddit_name}"
         body = f"{item.body}\n --- \n This service is provided by [ModFax📠](https://github.com/AnnsAnns/ModFax)."\
-            "\nSee [**How To Use 📖**](https://github.com/AnnsAnns/ModFax?tab=readme-ov-file#how-to-use)"\
-            "\n*You received this message because the author, the bot and you were all moderators of the subreddit.* "
+            "\n\nSee [**How To Use 📖**](https://github.com/AnnsAnns/ModFax?tab=readme-ov-file#how-to-use)"\
+            "\n\n*You received this message because the author, the bot and you were all moderators of the subreddit.* "
         mod.message(subject, body)
         print(f"Sent message to {mod}")
