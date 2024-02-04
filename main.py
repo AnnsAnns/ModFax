@@ -79,5 +79,14 @@ for item in reddit.inbox.stream():
         body = f"{item.body}\n --- \n This service is provided by [ModFax📠](https://github.com/AnnsAnns/ModFax)."\
             "\n\nSee [**How To Use 📖**](https://github.com/AnnsAnns/ModFax?tab=readme-ov-file#how-to-use)"\
             "\n\n*You received this message because the author, the bot and you were all moderators of the subreddit.* "
-        mod.message(subject, body)
+        try:
+            mod.message(subject, body)
+        except praw.exceptions.RedditAPIException as e:
+            logging.error(f"Error in sending message to {mod}: {}")
+            continue
+        
+        # Sleep for 5 seconds to avoid rate limiting
+        # Because reddit decided to be like Twitter
+        time.sleep(5)
+            
         print(f"Sent message to {mod}")
