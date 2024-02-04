@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "modfax"
+version = "0.1.0"
+description = "Send a pm to all mods of a subreddit (Replacement for https://www.reddit.com/r/mod_mailer/wiki/index which stopped working)"
+authors = ["AnnsAnn <git@annsann.eu>"]
+license = "EUPLv1.2+"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+praw = "^7.7.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
