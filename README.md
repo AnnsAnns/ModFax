@@ -1,6 +1,6 @@
 # ModFax
 
-ModFax is a Python project that utilizes Poetry and Praw to provide a streamlined way of broadcasting messages to all moderators of a subreddit.
+ModFax is a Python project that utilizes Poetry and Praw to provide a streamlined way of broadcasting messages to all moderators/approved submitters of a subreddit.
 
 ## Installation
 
